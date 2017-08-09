@@ -75,4 +75,5 @@ supervisord -c /etc/supervisor/supervisord.conf --user ${USER} --nodaemon &
 SUPERVISOR_PID=$!
 
 # tells bash to wait until child processes have exited
-wait "${SUPERVISOR_PID}"
+sleep 3
+cd /var/www/cysoco && codecept run --steps --env ${ENVIRONMENT} -f -g ${GROUP}
