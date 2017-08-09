@@ -617,6 +617,11 @@ COPY lib/* /usr/lib/
 COPY images/wallpaper-dosel.png /usr/share/images/fluxbox/ubuntu-light.png
 COPY images/wallpaper-zalenium.png /usr/share/images/fluxbox/
 
+#=================
+# codeception
+#=================
+RUN wget -O /usr/local/bin/codecept http://codeception.com/codecept.phar
+
 #===================================================
 # Run the following commands as non-privileged user
 #===================================================
@@ -642,11 +647,6 @@ RUN  wget -nv -O chromedriver_linux${CPU_ARCH}.zip ${CHROME_DRIVER_URL} \
   && ln -s chromedriver-${CHROME_DRIVER_VERSION} \
            chromedriver \
   && sudo ln -s /home/seluser/chromedriver /usr/bin
-
-#=================
-# codeception
-#=================
-RUN wget -O /usr/local/bin/codecept http://codeception.com/codecept.phar
 
 #=================
 # Supervisor conf
