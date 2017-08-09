@@ -101,6 +101,7 @@ RUN apt-get -qqy update \
     dbus-x11 \
     wget \
     curl \
+    php php-cli php-curl php-mysql php-mcrypt php-common php-mbstring php-dom php-xml \
   && apt-get -qyy autoremove \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get -qyy clean
