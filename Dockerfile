@@ -644,6 +644,11 @@ RUN  wget -nv -O chromedriver_linux${CPU_ARCH}.zip ${CHROME_DRIVER_URL} \
   && sudo ln -s /home/seluser/chromedriver /usr/bin
 
 #=================
+# codeception
+#=================
+RUN wget -O /usr/local/bin/codecept http://codeception.com/codecept.phar
+
+#=================
 # Supervisor conf
 #=================
 COPY supervisor/etc/supervisor/supervisord.conf /etc/supervisor/
