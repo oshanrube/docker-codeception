@@ -76,4 +76,4 @@ SUPERVISOR_PID=$!
 
 # tells bash to wait until child processes have exited
 sleep 3
-cd /var/www/cysoco && codecept run --steps --env ${ENVIRONMENT} -f -g ${GROUP}
+cd ${CODECEPTION_DIR} && codecept run --steps --env ${ENVIRONMENT} -f -g ${GROUP}

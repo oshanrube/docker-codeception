@@ -919,7 +919,8 @@ ENV FIREFOX_VERSION="${FF_VER}" \
   GA_ENDPOINT=https://www.google-analytics.com/collect \
   GA_API_VERSION="1" \
   DEBIAN_FRONTEND="" \
-  DEBCONF_NONINTERACTIVE_SEEN=""
+  DEBCONF_NONINTERACTIVE_SEEN="" \
+  CODECEPTION_DIR="/var/www/cysoco"
 
 #================================
 # Expose Container's Directories
