@@ -621,6 +621,7 @@ COPY images/wallpaper-zalenium.png /usr/share/images/fluxbox/
 # codeception
 #=================
 RUN wget -O /usr/local/bin/codecept http://codeception.com/codecept.phar && chmod +x /usr/local/bin/codecept
+RUN mkdir /tmp/codeception /tmp/codeception/_log /tmp/codeception/_data && chmod 777 -R /tmp/codeception
 
 #===================================================
 # Run the following commands as non-privileged user
